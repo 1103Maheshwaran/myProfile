@@ -2651,14 +2651,24 @@ table.alt tbody tr td {
 
 @media screen and (max-width: 980px) {
     .features li {
-        width: calc(50% - 2em);
+        width: calc(33.33% - 2em);
     }
-    .features li:nth-child(3) {
+    .features li:nth-child(4) {
         margin-top: 3em;
     }
 }
 
 @media screen and (max-width: 736px) {
+    .features li {
+        width: calc(50% - 2em);
+    }
+    .features li:nth-child(3),
+    .features li:nth-child(4) {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .features {
         width: 100%;
         margin: 0 0 2em 0;
@@ -2669,7 +2679,8 @@ table.alt tbody tr td {
         margin-top: 2em;
     }
     .features li:nth-child(2),
-    .features li:nth-child(3) {
+    .features li:nth-child(3),
+    .features li:nth-child(4) {
         margin-top: 2em;
     }
 }
@@ -2864,7 +2875,7 @@ table.alt tbody tr td {
         padding: 0.35em;
     }
     .spotlight .image img {
-        width: 12em;
+        width: 9em;
     }
 }
 
@@ -3656,4 +3667,66 @@ span1 {
 a:hover {
     border-bottom-color: transparent;
     color: #0e3fe0 !important;
+}
+
+
+/*Testing typewritting */
+
+.spotlight .content .container {
+    /*height: 100vh;*/
+    display: flex;
+    justify-content: left;
+    align-items: initial;
+}
+
+.spotlight .content .container h2 {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.spotlight .content .container h2 span.typed-text {
+    font-weight: normal;
+    color: #dd7732;
+}
+
+.spotlight .content .container h2 span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.spotlight .content .container h2 span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .spotlight .content .container h2 {
+        font-size: 1.7em;
+        letter-spacing: 0;
+        padding: auto;
+    }
 }
