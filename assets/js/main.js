@@ -1,9 +1,3 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
     var $window = $(window),
@@ -122,11 +116,11 @@
 
 })(jQuery);
 
-//Testing typewritting
+//Testing
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Data Scientist", "JAVA Developer", "Python Programmer", "Crypto Geek"];
+const textArray = ["Data Scientist", "Django Developer", "Crypto Analyst", "Bathroom Singer🎶"];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000; // Delay between current and next text
